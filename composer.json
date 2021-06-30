@@ -9,9 +9,7 @@
 			"email": "phpcfrawl@cuab.de"
         }
     ],
-    "minimum-stability": "*",
     "autoload": {
         "psr-4": {"mrax714\\PHPWebSpider\\": ["libs/","libs/Utils"]}
     },
-    "require": {}
 }
