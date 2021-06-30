@@ -1,17 +1,17 @@
 {
 	"name": "mrax714/phpwebspider",
 	"description": "PHPWebSpider",
+    "type": "library",
 	"license": "0BSD",
-	"authors": [
-		{
+    "authors": [
+        {
 			"name": "Ufwe Hunfeld",
 			"email": "phpcfrawl@cuab.de"
-		}
-	],
-	"autoload": {
-		"classmap": [
-			"libs/Utils/PHPWebSpiderUtils.class.php",
-			"libs"
-		]
-	}
+        }
+    ],
+    "minimum-stability": "*",
+    "autoload": {
+        "psr-4": {"mrax714\\PHPWebSpider\\": ["libs/","libs/Utils"]}
+    },
+    "require": {}
 }
