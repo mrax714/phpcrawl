@@ -1,16 +1,16 @@
 {
-	"name": "mrax714/phpwebspider",
-	"description": "PHP Web Spider",
+	"name": "mrax714/PHPWebSpider",
+	"description": "PHPWebSpider",
 	"license": "GPL-v2",
 	"authors": [
 		{
-			"name": "Uwe Hunfeld",
-			"email": "phpcrawl@cuab.de"
+			"name": "Ufwe Hunfeld",
+			"email": "phpcfrawl@cuab.de"
 		}
 	],
 	"autoload": {
 		"classmap": [
-			"libs/Utils/PHPCrawlerUtils.class.php",
+			"libs/Utils/PHPWebSpiderUtils.class.php",
 			"libs"
 		]
 	}
