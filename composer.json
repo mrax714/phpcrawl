@@ -10,6 +10,6 @@
         }
     ],
     "autoload": {
-        "psr-4": {"mrax714\\PHPWebSpider\\": ["libs/","libs/Utils"]}
+        "psr-4": {"mrax714\\PHPWebSpider\\": "libs/","libs/Utils"}
     },
 }
