@@ -532,14 +532,11 @@ class PHPCrawlerHTTPRequest
     
     // Get IP for hostname
     $ip_address = $this->DNSCache->getIP($this->url_parts["host"]);
-
+    
     // since PHP 5.6 SNI_server_name is deprecated
-    if (version_compare(PHP_VERSION, '5.6.0') >= 0)
-    {
+    if (version_compare(PHP_VERSION, '5.6.0') >= 0) {
       $serverName = 'peer_name';
-    }
-    else
-    {
+    } else {
       $serverName = 'SNI_server_name';
     }
     
@@ -555,9 +552,9 @@ class PHPCrawlerHTTPRequest
       if ($this->url_parts["protocol"] == "https://")
       {
         $context = stream_context_create(array(
-          'ssl' => array(
-            $serverName => $this->url_parts["host"],
-          ),
+                'ssl' => array(
+                        $serverName => $this->url_parts["host"],
+                ),
         ));
         $this->socket = @stream_socket_client($protocol_prefix.$ip_address.":".$this->url_parts["port"], $error_code, $error_str,
                                               $this->socketConnectTimeout, STREAM_CLIENT_CONNECT, $context);
@@ -983,9 +980,9 @@ class PHPCrawlerHTTPRequest
    * Prepares the given HTTP-query-string for the HTTP-request.
    *
    * HTTP-query-strings always should be utf8-encoded and urlencoded afterwards.
-   * So "/path/file?test=tatütata" will be converted to "/path/file?test=tat%C3%BCtata":
+   * So "/path/file?test=tat�tata" will be converted to "/path/file?test=tat%C3%BCtata":
    *
-   * @param stirng The quetry-string (like "/path/file?test=tatütata")
+   * @param stirng The quetry-string (like "/path/file?test=tat�tata")
    * @return string
    */
   protected function prepareHTTPRequestQuery($query)
